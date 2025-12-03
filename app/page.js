@@ -1,5 +1,4 @@
 ﻿// app/page.js  (server component — do NOT add "use client" here)
-<script src="http://localhost:8097"></script>
 import Hero from "../components/Hero";
 import HeroCTAs from "../components/HeroCTAs"; // client wrapper (must be a "use client" file)
 import FeaturedCard from "../components/FeaturedCard";
