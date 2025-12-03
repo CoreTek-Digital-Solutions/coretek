@@ -1,0 +1,12 @@
+﻿node_modules/
+.next/
+.netlify/
+vendor/
+patch-backup/
+dist/
+build/
+.DS_Store
+.vscode/
+.env
+.env.local
+.nvmrc
