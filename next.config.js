@@ -1,12 +1,7 @@
-/** @type {import('next').NextConfig} */
+/** next.config.js — simplified for app router */
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    appDir: true
-  },
-  images: {
-    domains: []
-  }
+  // keep any other top-level options you actually need here
 };
 
 module.exports = nextConfig;

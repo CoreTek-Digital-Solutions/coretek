@@ -1,21 +1,21 @@
-﻿import './globals.css'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+﻿// app/layout.js
+import "./globals.css"; // your Tailwind/global styles (this is OK here)
+import Header from "../components/Header";
+import Footer from "../components/Footer"; // or wherever your footer lives
 
-// /app/layout.js (top-level layout)
 export const metadata = {
   title: "CoreTek Digital Solutions",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png", // optional
-  }
-}
+  description: "CoreTek",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
-  )
+  );
 }

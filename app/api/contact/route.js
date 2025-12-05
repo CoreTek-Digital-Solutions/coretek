@@ -121,7 +121,7 @@ export async function POST(req) {
               email_from: email,
               description: `Website contact form:\n\n${summary}`,
               type: "lead",
-              // add custom fields here if you have them, e.g. x_source: 'website'
+              // add custom fields here, e.g. x_source: 'website'
             },
           ],
         ],
