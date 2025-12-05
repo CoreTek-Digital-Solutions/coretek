@@ -25,7 +25,7 @@ export default function Page() {
       <Services />
       <Pricing />
       <Testimonials />
-      <Team />
+      {/*<Team />*/}
     </div>
   );
 }

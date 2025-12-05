@@ -1,19 +1,19 @@
 ﻿// app/layout.js
-import "./globals.css"; // your Tailwind/global styles (this is OK here)
-import Header from "../components/Header";
-import Footer from "../components/Footer"; // or wherever your footer lives
+import './globals.css';                // <- must be in the app/ folder (app/globals.css)
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export const metadata = {
-  title: "CoreTek Digital Solutions",
-  description: "CoreTek",
+  title: 'CoreTek Digital Solutions',
+  description: 'SaaS, e-commerce, custom software',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-gray-50 text-gray-900 antialiased">
         <Header />
-        <main>{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
