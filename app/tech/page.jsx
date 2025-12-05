@@ -1,6 +1,6 @@
 // app/tech/page.jsx
 "use client";
-import TechStackFlow from "@/components/TechStackFlow";
+import TechStackFlow from "../../components/TechStackFlow";
 
 export default function TechPage() {
   return (
