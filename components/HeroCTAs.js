@@ -17,7 +17,7 @@ export default function HeroCTAs() {
         {/* Primary CTA: opens the modal */}
         <button
           onClick={() => setOpen(true)}
-          className="inline-flex items-center px-4 py-2 rounded-md text-white bg-gradient-to-r from-blue-600 to-teal-400 shadow transition-transform transform hover:-translate-y-0.5"
+          className="inline-flex items-center px-4 py-2 rounded-md text-white bg-gradient-to-r from-blue-600 to-teal-400 shadow transition-transform transform hover:-translate-y-0.5 dark:text-white"
         >
           Get a Free Consultation
         </button>

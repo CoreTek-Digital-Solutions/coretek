@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import DarkToggle from "./DarkToggle";
 
 export default function Header() {
   const [mounted, setMounted] = useState(false);
@@ -58,7 +59,7 @@ export default function Header() {
           <div className="relative group">
             <button
               type="button"
-              className="hover:text-coreBlue dark:hover:text-coreBlue transition-colors"
+              className="dark:text-white hover:text-coreBlue dark:hover:text-coreBlue transition-colors"
             >
               Services
             </button>
@@ -98,15 +99,17 @@ export default function Header() {
             </div>
           </div>
 
-          <Link href="/work" className="hover:text-coreBlue dark:hover:text-coreBlue">
+          <Link href="/work" className="dark:text-white hover:text-coreBlue dark:hover:text-coreBlue">
             Work
           </Link>
-          <Link href="/about" className="hover:text-coreBlue dark:hover:text-coreBlue">
+          <Link href="/about" className="dark:text-white hover:text-coreBlue dark:hover:text-coreBlue">
             About
           </Link>
-          <Link href="/contact" className="hover:text-coreBlue dark:hover:text-coreBlue">
+          <Link href="/contact" className="dark:text-white hover:text-coreBlue dark:hover:text-coreBlue">
             Contact
           </Link>
+                    {/* Dark mode toggle */}
+          <DarkToggle />
         </nav>
       </div>
     </header>

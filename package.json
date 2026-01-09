@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "22": "^0.0.0",
     "@sendgrid/mail": "^8.1.6",
     "next": "^13.5.11",
     "nodemailer": "^7.0.11",
