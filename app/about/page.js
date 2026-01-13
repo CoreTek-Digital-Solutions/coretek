@@ -78,8 +78,8 @@ export default function AboutPage() {
     <main className="max-w-5xl mx-auto px-6 py-20">
       {/* HERO */}
       <div className="fade-in text-center mb-16">
-        <h1 className="text-4xl font-extrabold mb-3">About CoreTek</h1>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <h1 className="text-4xl font-extrabold mb-3 dark:text-white">About CoreTek</h1>
+        <p className="text-gray-600 max-w-2xl mx-auto dark:text-white">
           We build secure, scalable software for fast-moving teams.
         </p>
       </div>
@@ -87,14 +87,14 @@ export default function AboutPage() {
       {/* TWO COLUMN SECTION */}
       <div className="fade-in grid md:grid-cols-2 gap-14">
         <div>
-          <h2 className="text-xl font-semibold mb-4">Who we are</h2>
-          <p className="text-gray-700 leading-relaxed">
+          <h2 className="text-xl font-semibold mb-4 dark:text-white">Who we are</h2>
+          <p className="text-gray-700 leading-relaxed dark:text-white">
             CoreTek Digital Solutions is a small team of engineers focused on SaaS, e-commerce and
             API-driven systems. We help companies ship faster without compromising reliability.
           </p>
 
-          <h3 className="font-semibold mt-8 mb-3">Our Values</h3>
-          <ul className="list-disc pl-5 space-y-1 text-gray-700">
+          <h3 className="font-semibold mt-8 mb-3 dark:text-white">Our Values</h3>
+          <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-white">
             <li>User-first product design</li>
             <li>Secure by design</li>
             <li>Observability & reliability</li>
@@ -102,9 +102,9 @@ export default function AboutPage() {
           </ul>
         </div>
 
-        <div className="fade-in bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <h3 className="font-semibold mb-2">What we do best</h3>
-          <ul className="space-y-2 text-gray-700">
+        <div className="fade-in bg-white p-6 rounded-xl shadow-sm border border-gray-100 dark:bg-gray-900 dark:border-gray-900">
+          <h3 className="font-semibold mb-2 dark:text-white">What we do best</h3>
+          <ul className="space-y-2 text-gray-700 dark:text-white">
             <li>• SaaS architecture & development</li>
             <li>• E-commerce performance & headless builds</li>
             <li>• API design, automation & internal tools</li>

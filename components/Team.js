@@ -8,7 +8,7 @@ export default function Team() {
     <section id="team" className="mt-20">
       <div className="text-center mb-8">
         <h2 className="text-2xl font-semibold dark:text-white">Our Team</h2>
-        <p className="text-gray-600 dark:text-gray-400 mt-2 max-w-2xl mx-auto">
+        <p className="text-gray-900 dark:text-gray-400 mt-2 max-w-2xl mx-auto">
           A small, team of engineers, designers, and project manager.
         </p>
       </div>
@@ -32,8 +32,8 @@ export default function Team() {
           <Image
             src="/junrey.jpg"
             alt="Junrey Rivera"
-            width={66}
-            height={66}
+            width={96}
+            height={96}
             className="rounded-full object-cover"
           />
           <div className="mt-4 font-semibold dark:text-white">Junrey Rivera</div>
@@ -48,7 +48,7 @@ export default function Team() {
             alt="Kristian Bailo"
             width={96}
             height={96}
-            className="rounded-full object-cover"
+            className="rounded-full object-cover dark:bg-white"
           />
           <div className="mt-4 font-semibold dark:text-white">Kristian Bailo</div>
           <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">

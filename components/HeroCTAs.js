@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ContactModal from "./ContactModal";
 import CTAButton from "./CTAButton";
+import DarkToggle from "./DarkToggle";
 
 export default function HeroCTAs() {
   const [open, setOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function HeroCTAs() {
         </button>
 
         {/* Secondary CTA: anchor to work page */}
-        <Link href="/work" className="inline-flex items-center px-4 py-2 rounded-md border text-sm text-gray-700 hover:bg-gray-100">
+        <Link href="/work" className="inline-flex items-center px-4 py-2 rounded-md border text-sm text-gray-700 hover:bg-gray-100 dark:bg-[white] dark:hover:bg-[grey]">
           See Our Work
         </Link>
       </div>
