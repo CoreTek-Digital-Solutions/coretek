@@ -14,7 +14,7 @@ export default function HeroCTAs() {
     <>
       <ContactModal open={open} onClose={() => setOpen(false)} />
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 mt-3">
         {/* Primary CTA: opens the modal */}
         <button
           onClick={() => setOpen(true)}
@@ -24,7 +24,7 @@ export default function HeroCTAs() {
         </button>
 
         {/* Secondary CTA: anchor to work page */}
-        <Link href="/work" className="inline-flex items-center px-4 py-2 rounded-md border text-sm text-gray-700 hover:bg-gray-100 dark:bg-[white] dark:hover:bg-[grey]">
+        <Link href="/work" className="inline-flex items-center px-4 py-2 rounded-md border transition-transform transform hover:-translate-y-0.5 text-sm text-gray-700 hover:bg-gray-100 dark:bg-[white] ">
           See Our Work
         </Link>
       </div>

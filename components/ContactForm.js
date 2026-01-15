@@ -13,7 +13,9 @@
         <textarea name="message" className="p-3 border rounded md:col-span-2 dark:text-white" rows="4" placeholder="Brief project description"></textarea>
 
         <div className="md:col-span-2 flex items-center justify-between">
-          <div className="text-sm text-gray-500 dark:text-white">Or email us at <a href="mailto:hello@coretek.digital" className="text-coreBlue">hello@coretek.digital</a></div>
+          <div className="text-sm text-gray-500 dark:text-white">Or email us at <a href="mailto:coretekdigitalsolutions@gmail.com
+" className="text-coreBlue">coretekdigitalsolutions@gmail.com
+</a></div>
           <button type="submit" className="px-5 py-3 rounded bg-gradient-to-r from-coreBlue to-digitalTeal text-white">Send message</button>
         </div>
       </form>
