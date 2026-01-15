@@ -11,7 +11,7 @@ const TechStackFlow = dynamic(() => import("/components/TechStackFlow"), { ssr: 
 --------------------------- */
 export function WhyCoretek({ title = "Why CoreTek Solutions?" }) {
   return (
-    <section id="why-coretek" className="py-16 bg-white dark:bg-gray-900">
+    <section id="why-coretek" className="py-16 bg-white dark:bg-gray-900 rounded-xl">
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">{title}</h2>
 
@@ -53,7 +53,7 @@ export function MissionVision({ mission = null, vision = null }) {
     "Become the trusted technology partner for growth-stage companies across the region, known for speed, reliability, and strong product sense.";
 
   return (
-    <section id="mission-vision" className="py-16 bg-gray-50 dark:bg-gray-900">
+    <section id="mission-vision" className="py-16 bg-gray-50 dark:bg-gray-900 rounded-xl mt-2">
       <div className="max-w-5xl mx-auto px-6 grid gap-8 md:grid-cols-2 items-start">
         <div>
           <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Mission</h3>
@@ -113,6 +113,12 @@ export default function AboutPage() {
         </div>
       </div>
 
+      {/* WHY + MISSION */}
+      <div className="mt-20">
+        <WhyCoretek />
+        <MissionVision />
+      </div>
+
       {/* TEAM SECTION */}
       <div className="mt-20">
         <Team />
@@ -121,12 +127,6 @@ export default function AboutPage() {
       {/* OPTIONAL: TechStack Animation */}
       <div className="mt-20">
         <TechStackFlow />
-      </div>
-
-      {/* WHY + MISSION */}
-      <div className="mt-20">
-        <WhyCoretek />
-        <MissionVision />
       </div>
     </main>
   );

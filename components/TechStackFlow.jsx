@@ -110,8 +110,12 @@ export default function TechStackFlow({ width = 980, height = 420, nodes = DEFAU
                 <circle r={radius - 10} fill="rgba(255,255,255,0.06)" />
                 <foreignObject x={-80} y={radius + 8} width={160} height={56}>
                   <div xmlns="http://www.w3.org/1999/xhtml" className="text-center">
-                    <div style={{ fontSize: 14, fontWeight: 700, color: "#0f172a" }}>{n.label}</div>
-                    <div style={{ fontSize: 12, color: "#475569", marginTop: 4 }}>{n.pct}%</div>
+                    <div className="text-[14px] font-bold text-slate-900 dark:text-white">
+                      {n.label}
+                    </div>
+                  <div className="text-[12px] text-slate-500 dark:text-slate-300 mt-1">
+                      {n.pct}%
+                  </div>
                   </div>
                 </foreignObject>
               </g>
