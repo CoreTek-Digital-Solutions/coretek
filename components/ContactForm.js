@@ -1,34 +1,42 @@
-﻿"use client"; 
+﻿"use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const formRef = useRef();
+  const [toast, setToast] = useState({ show: false, type: "", message: "" });
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_y24l8a6",   
-        "template_mecbmls",  
+        "service_y24l8a6",
+        "template_mecbmls",
         formRef.current,
-        "rNoJy2c7P1uUERmjk"    
+        "rNoJy2c7P1uUERmjk"
       )
       .then(() => {
-        alert("Message sent successfully ✅");
+        showToast("success", "Message sent successfully ✅");
         formRef.current.reset();
       })
       .catch((err) => {
         console.error(err);
-        alert("Failed to send message ❌");
+        showToast("error", "Failed to send message ❌");
       });
   };
 
+  const showToast = (type, message) => {
+    setToast({ show: true, type, message });
+    setTimeout(() => setToast({ show: false, type: "", message: "" }), 4000); // disappears after 4s
+  };
+
   return (
-    <div className="max-w-3xl mx-auto bg-white rounded-lg shadow p-8 dark:bg-gray-900">
-      <h3 className="text-xl font-semibold dark:text-white">Let's talk about your project</h3>
+    <div className="max-w-3xl mx-auto bg-white rounded-lg shadow p-8 dark:bg-gray-900 relative">
+      <h3 className="text-xl font-semibold dark:text-white">
+        Let's talk about your project
+      </h3>
       <p className="text-sm text-gray-600 mt-2 dark:text-gray-300">
         Tell us a bit about your needs and we'll reply within 1 business day.
       </p>
@@ -64,25 +72,40 @@ export default function ContactForm() {
         />
 
         <div className="md:col-span-2 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="text-sm text-gray-500 dark:text-gray-300 break-words">
-                Or email us at{" "}
+          <div className="text-sm text-gray-500 dark:text-gray-300 break-words">
+            Or email us at{" "}
             <a
               href="mailto:coretekdigitalsolutions@gmail.com"
               className="text-coreBlue break-words"
             >
               coretekdigitalsolutions@gmail.com
             </a>
-        </div>
+          </div>
 
-        <button
-          type="submit"
-          className="w-full sm:w-auto px-5 py-3 rounded bg-gradient-to-r from-coreBlue to-digitalTeal text-white"
-        >
-              Send message
-        </button>
+          <button
+            type="submit"
+            className="w-full sm:w-auto px-5 py-3 rounded bg-gradient-to-r from-coreBlue to-digitalTeal text-white"
+          >
+            Send message
+          </button>
         </div>
-
       </form>
+
+      <div
+        className={`fixed top-5 left-1/2 transform -translate-x-1/2 transition-all duration-500 z-50 ${
+          toast.show ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"
+        }`}
+      >
+        <div
+          className={`px-6 py-4 rounded-lg shadow-lg border-2 font-semibold ${
+            toast.type === "success"
+              ? "bg-green-100 dark:bg-green-800 text-green-800 dark:text-green-100 border-green-500"
+              : "bg-red-100 dark:bg-red-800 text-red-800 dark:text-red-100 border-red-500"
+          }`}
+        >
+          {toast.message}
+        </div>
+      </div>
     </div>
   );
 }
