@@ -12,15 +12,18 @@ export default function Footer() {
               CoreTek Digital Solutions
             </p>
             <p className="text-gray-500 dark:text-gray-400 text-xs">
-              Building reliable digital systems.
+              Building reliable digital systems
+            </p>
+            <p className="text-gray-500 dark:text-gray-400 text-xs">
+              Building reliable digital systems
             </p>
           </div>
         </div>
 
         <div className="flex flex-col items-center md:items-start space-y-2 text-gray-600 dark:text-gray-400">
           <h4 className="font-semibold text-gray-700 dark:text-gray-300 mb-2">Quick Links</h4>
-          <a href="#about" className="hover:text-blue-600 transition-colors">About Us</a>
-          <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
+          <a href="/about" className="hover:text-blue-600 transition-colors">About Us</a>
+          <a href="/contact" className="hover:text-blue-600 transition-colors">Contact</a>
           <a href="#privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</a>
           <a href="#terms" className="hover:text-blue-600 transition-colors">Terms & Conditions</a>
         </div>
@@ -60,15 +63,12 @@ export default function Footer() {
               </span>
             </a>
           </div>
+          <div>
+            <span className="text-gray-700 dark:text-gray-300 text-xs font-semibold">All rights reserved © {new Date().getFullYear()}</span>
+          </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-200 dark:border-gray-800 mt-8 pt-4 text-center text-gray-500 dark:text-gray-400 text-xs flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-2">
-        <span>CoreTek Digital Solutions</span>
-        <span className="hidden md:inline">•</span>
-        <span>All rights reserved © {new Date().getFullYear()}</span>
-      </div>
     </footer>
   );
 }
